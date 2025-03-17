@@ -8,8 +8,8 @@ export async function POST(req) {
     const { name, email, message } = await req.json();
 
     const emailResponse = await resend.emails.send({
-      from: "Your Name <your@email.com>", // Must be a verified sender
-      to: "yourinbox@example.com", // Change to your email
+      from: "onboarding@resend.dev", // Must be a verified sender
+      to: "kiruikevinkim@gmail.com", // Change to your email
       subject: "New Contact Form Submission",
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });

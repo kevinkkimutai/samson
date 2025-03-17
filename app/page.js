@@ -5,10 +5,23 @@ import Hero from "@/components/Hero";
 import ServicesExpertise from "@/components/ServicesExpertise";
 import Testimonials from "@/components/Testimonials";
 import Script from "next/script";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
   <div>
+       <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 <Hero />
 <AboutMe />
 <ServicesExpertise />

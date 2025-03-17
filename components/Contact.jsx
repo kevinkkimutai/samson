@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,7 +9,7 @@ export default function Contact() {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,7 +17,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setLoading(true);
 
     const response = await fetch("/api/contact", {
       method: "POST",
@@ -26,10 +27,12 @@ export default function Contact() {
 
     const result = await response.json();
     if (result.success) {
-      setStatus("Message sent successfully! ✅");
+      setLoading(false);
+      toast.success("Message sent successfully! 🎉");
       setFormData({ name: "", email: "", message: "" });
     } else {
-      setStatus("Failed to send message. ❌");
+      setLoading(false);
+      toast.error("Failed to send message. 🥶");
     }
   };
 
@@ -113,10 +116,10 @@ export default function Contact() {
               type="submit"
               className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition"
             >
-              Send Message
+            {loading ? "Loading...." : "Send Message"}
             </button>
           </form>
-          {status && <p className="mt-4 text-gray-600">{status}</p>}
+         
         </div>
       </div>
     </section>
