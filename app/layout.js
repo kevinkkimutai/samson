@@ -18,19 +18,19 @@ export const metadata = {
   description:
     "Showcasing expertise in client solutions, business optimization, and service excellence. Connect to collaborate on innovative business strategies.",
   keywords: "Samson Mburu, client solutions, servicing executive, business strategies, customer experience, service management",
-  author: "Your Name",
+  author: "Kelvin Kimutai",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Client Solutions & Servicing Executive",
+    title: "Samson Mburu | Client Solutions & Servicing Executive",
     description:
       "Explore expertise in client solutions, customer service, and business optimization. Connect for collaboration opportunities.",
-    url: "https://yourportfolio.com",
+    url: "https://samson.tau.vercel.app",
     siteName: "Client Solutions & Servicing Executive",
     images: [
       {
-        url: "https://yourportfolio.com/og-image.jpg",
+        url: "https://samson.tau.vercel.app/sam.png",
         width: 1200,
         height: 630,
         alt: "Portfolio Preview",
@@ -41,13 +41,13 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@yourtwitterhandle",
-    title: "Client Solutions & Servicing Executive",
+    title: "Samson Mburu | Client Solutions & Servicing Executive",
     description:
       "Expert in client solutions, business strategies, and service excellence. Let's collaborate!",
-    images: ["https://yourportfolio.com/twitter-image.jpg"],
+    images: ["https://samson.tau.vercel.app/sam.png"],
   },
   robots: "index, follow",
-  canonical: "https://yourportfolio.com",
+  canonical: "https://samson.tau.vercel.app",
 };
 
 

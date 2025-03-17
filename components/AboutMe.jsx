@@ -5,7 +5,7 @@ export default function AboutMe() {
     <section id='about-me' className="about bg-white py-20">
     <div className="container max-w-screen-xl mx-auto max-md:px-4">
      <div className=' grid grid-cols-1 md:grid-cols-2 items-center  gap-12'>
-     <div className="w-full mt-14">
+     <div className="w-full mt-14 max-md:hidden">
         <img src="/illustration.webp" alt="Client Solutions Expert" className="w-full  " />
       </div>
       <div className="w-full  mt-8 md:mt-0 max-md:text-start text-center md:text-left">
@@ -23,6 +23,9 @@ export default function AboutMe() {
         <a href="#contact" className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all">
           Learn More
         </a>
+      </div>
+      <div className="w-full mt-14 md:hidden">
+        <img src="/illustration.webp" alt="Client Solutions Expert" className="w-full  " />
       </div>
      </div>
     </div>
